@@ -13,19 +13,23 @@ class ModulesList:
 		self.modules = []
 		for filename in self.filenames:
 			f = open('./modules/' + filename)
+			coords = [100, 100]
+			inlets = []
+			outlets = []
+			# Loop over file to get some info about the module
 			for line in f:
 				# #X coords 0 -1 1 1 100w 200h 2 100 100;
-				# module must have coords to be used?
+				if line.find()
 				if line.find('coords') >= 0:
 					coords = [line.split()[6], line.split()[7]]
-					modules = {
-						'name': filename[:-3],
-						'filename': filename,
-						'width': coords[0],
-						'height': coords[1],
-						'coords': line.split()[2:]
-					}
-					self.modules.append(modules)
+			modules = {
+				'name': filename[:-3],
+				'filename': filename,
+				'width': coords[0],
+				'height': coords[1],
+				'coords': line.split()[2:],
+			}
+			self.modules.append(modules)
 		
 
 ModulesList()
