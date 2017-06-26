@@ -99,6 +99,7 @@ class Box:
         command  = Box.canvas + "mouse " + str(self.x+1) + " " + str(self.y+1) + " 1 0 ; "
         command += Box.canvas + "motion " + str(new_x+1) + " " + str(new_y+1) + " 0 ; "
         command += Box.canvas + "mouseup " + str(new_x+1) + " " + str(new_y+1) + " 1 0 ; "
+        print command
         self.x=new_x
         self.y=new_y
         Box.snd.send_pd(command)

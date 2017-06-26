@@ -19,7 +19,7 @@ class ModulesList:
 			# Loop over file to get some info about the module
 			for line in f:
 				# #X coords 0 -1 1 1 100w 200h 2 100 100;
-				if line.find()
+				# if line.find()
 				if line.find('coords') >= 0:
 					coords = [line.split()[6], line.split()[7]]
 			modules = {
